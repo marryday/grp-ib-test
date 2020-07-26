@@ -1,0 +1,77 @@
+.card{
+  width: 22%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin:  3px;
+  border-radius: 5px;
+}
+
+.card a{
+  display: block;
+}
+
+.card h5{
+  margin: 7px;
+}
+
+.favorite {
+  background-color: red;
+}
+.card img {
+  height: 300px;
+}
+button {
+  border-radius: 5px;
+  border: 2px solid grey;
+}
+.match a{
+  color: darkblue;
+}
+.item-tag{
+  background-color: #26b999;
+  opacity: .9;
+  display:block;
+  border-radius: 7px;
+  padding: 3px;
+}
+.date{
+  text-align: right;
+  opacity: 0.5;
+  display: block;
+  margin: 0;
+}
+.item-description{
+  height: 20%;
+  padding: 0 10px;
+}
+
+.addToFavorites {
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card--header{
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.card--tags{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.item-tag{
+  margin: 2px;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font: 25px bold;
+}
