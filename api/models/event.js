@@ -1,32 +1,31 @@
- 
-const {Schema, model,connect} = require('mongoose');
-const {ObjectId} = require('mongoose').Schema.Types;
+const { Schema, model } = require("mongoose");
+const { ObjectId } = require("mongoose").Schema.Types;
 
 const eventSchema = new Schema({
   title: {
     type: String,
-    required:[true, 'Укажите заголовок мероприятия'],
+    required: [true, "Укажите заголовок мероприятия"],
   },
   img: {
     type: String,
   },
   date: {
     type: String,
-    required:[true, 'Укажите дату']
+    required: [true, "Укажите дату"],
   },
-  description:{
+  description: {
     type: String,
   },
   tag: {
     type: ObjectId,
-    ref: 'Tag'
+    ref: "Tag",
   },
   favorites: {
     type: String,
-    default: false
-  }
-})
+    default: false,
+  },
+});
 
-const Event = model('Event', eventSchema);
+const Event = model("Event", eventSchema);
 
 module.exports = Event;

@@ -1,7 +1,7 @@
 export function loadEvents() {
   return async (dispatch) => {
     try {
-      const init = await (await fetch("http://localhost:3001/api")).json();
+      const init = await (await fetch("/api")).json();
       dispatch(loadingComplete(init));
     } catch (e) {
       console.error(e);
@@ -17,7 +17,7 @@ export function addEvent() {
   return async (dispatch) => {
     try {
       const response = await (
-        await fetch("http://localhost:3001/api", {
+        await fetch("/api", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export function add_complete(payload) {
 export function iWillCome(id) {
   return async (dispatch) => {
     try {
-      await fetch(`http://localhost:3001/api`, {
+      await fetch(`/api`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

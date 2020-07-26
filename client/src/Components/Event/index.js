@@ -6,20 +6,20 @@ import { Link, useParams } from "react-router-dom";
 
 export default ({ date, description, img, title, tag, _id, favorites }) => {
   const id = useParams().id;
-  const match = id === _id ? " match" : "";
-  const favorite = favorites === "true" ? "favorite" : "";
+  const match = id === _id ? " card_match" : "";
+  const favorite = favorites === "true" ? "card_active" : "";
   const dispatch = useDispatch();
   const tags = [];
   for (const [index, value] of Object.entries(tag)) {
     index === "price"
       ? tags.push(
-          <p className="item-tag" key={index}>
+          <p className="card__tags__item" key={index}>
             {index} | {value}
             {" рублей"}
           </p>
         )
       : tags.push(
-          <p className="item-tag" key={index}>
+          <p className="card__tags__item" key={index}>
             {index} | {value}
           </p>
         );
@@ -27,14 +27,14 @@ export default ({ date, description, img, title, tag, _id, favorites }) => {
   return (
     <div className={favorite + " card " + match}>
       <img src={img} alt="" />
-      <div className="card--header">
+      <div className="card__header">
         <Link to={`/${_id}`}>{title}</Link>
-        <p className="date">{date}</p>
+        <p className="card__date">{date}</p>
       </div>
-      <p className="item-description">{description}</p>
+      <p className="card__description">{description}</p>
 
       <h5>Метки</h5>
-      <div className="card--tags">
+      <div className="card__tags">
         {tags.map((el, index) => {
           if (index !== 0 && index !== tags.length - 1) return el;
         })}

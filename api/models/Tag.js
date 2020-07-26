@@ -1,14 +1,12 @@
- 
-const {Schema, model, connect} = require('mongoose');
-const {ObjectId} = require('mongoose').Schema.Types;
+const { Schema, model } = require("mongoose");
 
 const tagSchema = new Schema({
   ageLimit: String,
   duration: String,
   price: Number,
   location: String,
-})
+});
 
-const Tag = model('Tag', tagSchema);
+const Tag = model("Tag", tagSchema);
 
 module.exports = Tag;

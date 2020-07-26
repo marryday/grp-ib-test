@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { loadEvents } from "../../redux/actions";
 import "./style.css";
+
 export default () => {
   const dispatch = useDispatch();
   const events = useSelector((state) => state.events);
@@ -13,7 +14,6 @@ export default () => {
     }
     fetchData();
   }, [dispatch]);
-
   return (
     <div className="events-list">
       {events &&

@@ -17,7 +17,7 @@
   margin: 7px;
 }
 
-.favorite {
+.card_active {
   background-color: red;
 }
 .card img {
@@ -27,23 +27,23 @@ button {
   border-radius: 5px;
   border: 2px solid grey;
 }
-.match a{
+.card_match a{
   color: darkblue;
 }
-.item-tag{
+.card__tags__item{
   background-color: #26b999;
   opacity: .9;
   display:block;
   border-radius: 7px;
   padding: 3px;
 }
-.date{
+.card__date{
   text-align: right;
   opacity: 0.5;
   display: block;
   margin: 0;
 }
-.item-description{
+.card__description{
   height: 20%;
   padding: 0 10px;
 }
@@ -54,20 +54,20 @@ button {
   margin: 0 auto;
 }
 
-.card--header{
+.card__header{
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
   
 }
 
-.card--tags{
+.card__tags{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.item-tag{
+.card__tags{
   margin: 2px;
 }
 a{
