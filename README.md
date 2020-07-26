@@ -10,10 +10,3 @@ $ cd ../client
 $ npm i 
 $ npm start  ||  yarn start
 ```
-
-For production environments...
-
-```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
