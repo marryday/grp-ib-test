@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { loadEvents } from "../../redux/actions";
 import "./style.css";
-import {RootState} from "../../models/Event"
+import {Events} from "../../models/Event"
 
 
 const EventList: React.FC =  () => {
@@ -19,7 +19,7 @@ const EventList: React.FC =  () => {
   return (
     <div className="events-list">
       {events &&
-        events.map((event) => <Event key={event._id} {...event}></Event>)}
+        events.map((event: Events) => <Event key={event._id} {...event}></Event>)}
     </div>
   );
 };

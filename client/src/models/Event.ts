@@ -1,11 +1,11 @@
-type Tag  = {
+export type Tag  = {
   ageLimit: string,
   duration: string,
   price: number,
   location: string,
 }
 
-type Events ={
+export type Events ={
   _id: string,
   title: string,
   date: string,
