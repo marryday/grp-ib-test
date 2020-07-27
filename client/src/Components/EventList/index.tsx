@@ -5,9 +5,31 @@ import { useDispatch } from "react-redux";
 import { loadEvents } from "../../redux/actions";
 import "./style.css";
 
+type Tag  = {
+  ageLimit: string,
+  duration: string,
+  price: number,
+  location: string,
+}
+
+type Events ={
+  _id: string,
+  title: string,
+  date: string,
+  description: string,
+  img: string,
+  tag: Tag
+  favorites: ['true', 'false']
+}
+
+interface RootState {
+  loading: boolean,
+  events: Array<Events>,
+}
+
 export default () => {
   const dispatch = useDispatch();
-  const events = useSelector((state) => state.events);
+  const events = useSelector((state: RootState) => state.events);
   useEffect(() => {
     async function fetchData() {
       dispatch(loadEvents());
