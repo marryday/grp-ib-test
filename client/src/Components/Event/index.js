@@ -5,7 +5,6 @@ import "./style.css";
 import { Link, useParams } from "react-router-dom";
 
 export default React.memo(({ date, description, img, title, tag, _id, favorites }) => {
-  console.log('sd')
   const id = useParams().id;
   const match = id === _id ? " card_match" : "";
   const favorite = favorites === "true" ? "card_active" : "";
