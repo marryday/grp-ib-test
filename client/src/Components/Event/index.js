@@ -4,7 +4,8 @@ import { iWillCome } from "../../redux/actions";
 import "./style.css";
 import { Link, useParams } from "react-router-dom";
 
-export default ({ date, description, img, title, tag, _id, favorites }) => {
+export default React.memo(({ date, description, img, title, tag, _id, favorites }) => {
+  console.log('sd')
   const id = useParams().id;
   const match = id === _id ? " card_match" : "";
   const favorite = favorites === "true" ? "card_active" : "";
@@ -47,4 +48,4 @@ export default ({ date, description, img, title, tag, _id, favorites }) => {
       </button>
     </div>
   );
-};
+});
