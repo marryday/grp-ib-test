@@ -4,30 +4,10 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { loadEvents } from "../../redux/actions";
 import "./style.css";
+import {RootState} from "../../models/Event"
 
-type Tag  = {
-  ageLimit: string,
-  duration: string,
-  price: number,
-  location: string,
-}
 
-type Events ={
-  _id: string,
-  title: string,
-  date: string,
-  description: string,
-  img: string,
-  tag: Tag
-  favorites: ['true', 'false']
-}
-
-interface RootState {
-  loading: boolean,
-  events: Array<Events>,
-}
-
-export default () => {
+const EventList: React.FC =  () => {
   const dispatch = useDispatch();
   const events = useSelector((state: RootState) => state.events);
   useEffect(() => {
@@ -43,3 +23,5 @@ export default () => {
     </div>
   );
 };
+
+export default EventList;
