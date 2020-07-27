@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { loadEvents } from "../../redux/actions";
 import "./style.css";
-import {Events} from "../../models/Event"
+import {Events, RootState} from "../../models/Event"
 
 
 const EventList: React.FC =  () => {
