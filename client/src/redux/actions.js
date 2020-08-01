@@ -35,17 +35,21 @@ export function add_complete(payload) {
   return { type: "ADD_COMPLETE", payload };
 }
 
+export function iWillComeComplete(payload){
+  return {type: 'COMING_COMPLETE', payload}
+}
+
 export function iWillCome(id) {
   return async (dispatch) => {
     try {
-      await fetch(`/api`, {
+     await fetch(`/api`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ id }),
-      });
-      dispatch(loadEvents());
+      })
+      dispatch(iWillComeComplete(id));
     } catch (e) {
       console.error(e);
     }
