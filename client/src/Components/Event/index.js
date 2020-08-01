@@ -24,7 +24,7 @@ export default React.memo(({ date, description, img, title, tag, _id, favorites 
           </p>
         );
   }
-  console.log('render')
+
   return (
     <div className={favorite + " card " + match}>
       <img src={img} alt="" />

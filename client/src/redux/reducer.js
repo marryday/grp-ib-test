@@ -10,7 +10,7 @@ export const reducer = (state = initialState, action) => {
     case "LOADING_COMPLETE":
       return { ...state, events: [...action.payload] };
     case "COMING_COMPLETE":
-      return {...state, events: state.events.map(event => {if (event._id === action.payload){event.favorites = 'true'} return event })}
+      return {...state, events: state.events.map(event =>  event._id === action.payload ?  {...event, favorites :'true'} : event )}
     default:
       return state;
   }
