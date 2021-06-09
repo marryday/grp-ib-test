@@ -7,7 +7,7 @@ export default () => {
   const dispatch = useDispatch();
   return (
     <button className="button-add" onClick={() => dispatch(addEvent())}>
-      Добавить
+      Добавить!
     </button>
   );
 };
